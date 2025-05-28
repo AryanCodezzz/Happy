@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, My Love!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti"></canvas>
+
+  <!-- Birthday Tune -->
+  <audio autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>🎉 Happy Birthday, My Love! 🎂</h1>
+  <div class="heart"></div>
+
+  <!-- Love Letter with Typing -->
+  <section class="love-letter">
+    <h2>💌 My Sweet Letter to You</h2>
+    <p id="typed-text"></p>
+  </section>
+
+  <!-- Interactive Messages -->
+  <section class="messages">
+    <h2>💬 Little Surprises</h2>
+    <div id="message-box">
+      <p id="message">Click next to read sweet notes!</p>
+    </div>
+    <button onclick="nextMessage()">Next 💌</button>
+  </section>
+
+  <!-- Slideshow Gallery -->
+  <section class="gallery">
+    <h2>📸 You And Me </h2>
+    <div class="slideshow">
+      <img id="slide" src="images/photo1.jpg" alt="Slideshow Image" />
+    </div>
+  </section>
+
+  <!-- Greeting Popup -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h3>🎉 Surprise Message!</h3>
+      <p>You light up my world more than any fireworks ever could. 💖</p>
+      <button onclick="closePopup()">Aww, thank you!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

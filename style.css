@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Heart decoration */
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: relative;
+  margin: 10px auto 40px;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.2s infinite;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  background: red;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.2); }
+}
+
+/* Love Letter */
+.love-letter {
+  background: #fff4e6;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-style: italic;
+  white-space: pre-wrap;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Interactive Messages */
+.messages {
+  margin-bottom: 40px;
+}
+
+#message-box {
+  background: #ffe3e3;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 10px auto;
+  font-size: 1.2em;
+  min-height: 70px;
+  color: #b00020;
+  font-weight: 600;
+}
+
+button {
+  background-color: #f87171;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #ef4444;
+}
+
+/* Slideshow */
+.slideshow {
+  margin: 0 auto 60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Confetti canvas styles */
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff8e1;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  max-width: 400px;
+  z-index: 10000;
+  text-align: center;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #f87171;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
